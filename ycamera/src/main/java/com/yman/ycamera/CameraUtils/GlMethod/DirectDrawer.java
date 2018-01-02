@@ -55,11 +55,19 @@ public class DirectDrawer {
             1.0f,  1.0f,
     };
 
-    static float textureVertices[] = {
+    //后置
+    /*static float textureVertices[] = {
             0.0f, 1.0f,
             1.0f, 1.0f,
             1.0f, 0.0f,
             0.0f, 0.0f,
+    };*/
+    //前置
+    static float textureVertices[] = {
+            1.0f, 0.0f,
+            0.0f, 0.0f,
+            0.0f, 1.0f,
+            1.0f, 1.0f,
     };
 
     private int texture;

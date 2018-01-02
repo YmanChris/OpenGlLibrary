@@ -4,6 +4,8 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.util.Log;
 
+import com.example.yman.toolslibrary.Utils.LogUtils;
+
 import java.io.IOException;
 
 /**
@@ -25,7 +27,7 @@ public class CameraInterFace {
 
     public static void openCamera(){
         if(null == sCamera){
-            sCamera = Camera.open(0);
+            sCamera = Camera.open(1);
         }
     }
 
@@ -55,5 +57,9 @@ public class CameraInterFace {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void getPreviewSize(){
+
     }
 }
