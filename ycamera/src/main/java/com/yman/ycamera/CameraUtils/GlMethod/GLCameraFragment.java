@@ -29,6 +29,8 @@ public class GLCameraFragment extends Fragment{
     private GLSurfaceView glSurfaceView;
     private SurfaceTexture surfaceTexture;
 
+    private FaceRectSurfaceView mFaceRectSurfaceView;
+
     private Camera mCamera;
 
     @Override

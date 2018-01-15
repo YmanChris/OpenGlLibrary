@@ -5,6 +5,7 @@ import android.hardware.Camera;
 import android.util.Log;
 
 import com.example.yman.toolslibrary.Utils.LogUtils;
+import com.yman.ycamera.CameraUtils.GlMethod.CameraFaceData;
 
 import java.io.IOException;
 
@@ -53,7 +54,15 @@ public class CameraInterFace {
                     Log.i(TAG,"onPrviewFrame:");
                 }
             });
+            sCamera.setFaceDetectionListener(new Camera.FaceDetectionListener() {
+                @Override
+                public void onFaceDetection(Camera.Face[] faces, Camera camera) {
+                    Log.i(TAG,"onFaceFrame:");
+                    CameraFaceData.sFaceArrayList.add(faces);
+                }
+            });
             sCamera.startPreview();
+            sCamera.startFaceDetection();
         } catch (IOException e) {
             e.printStackTrace();
         }
